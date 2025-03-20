@@ -16,7 +16,7 @@ public abstract class ExpressionComposite implements MathExpression, Observer {
     public int getLastObservedResult(){
         return LastObservedResult;
     }
-
+    public abstract int getResult();
 }
     
 
