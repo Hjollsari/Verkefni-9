@@ -5,7 +5,7 @@ import java.util.List;
 
 public abstract class ExpressionComposite implements MathExpression, Observer {
     protected List<MathExpression> children = new ArrayList<>();
-    protected int LastObservedResult;
+    private int LastObservedResult;
     public void add(MathExpression mathExpression) {
         children.add(mathExpression);
     }
@@ -15,6 +15,9 @@ public abstract class ExpressionComposite implements MathExpression, Observer {
     }
     public int getLastObservedResult(){
         return LastObservedResult;
+    }
+    public int getResult() {
+        return 0;
     }
 }
     
